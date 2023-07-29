@@ -41,22 +41,22 @@ File Format:
 
 Reading the file is done similarly to a stream to keep memory usage low.
 First skip is read then file pointer is increased by skip.
-Then loop is read and the program enters a for loop.
-In the for loop both the big number and the multiplier are read to memory and then multiplied.
+Then loop is read and the program enters a loop.
+In the loop both the big number and the multiplier are read to memory and then multiplied.
 After multiplication the numbers are saved as base10 instead of binary to keep them readable.
 
 <br />
 <br />
 5) Writing Output
 
-Within the for loop the base10 numbers are written to out.txt.
+Output is written to out.txt as the input file is read.
 
 <br />
 <br />
 <br />
+
 <pre>
 > gcc -O3 Generate_Input_File.c -o Generate_Input_File.out
-
 > time ./Generate_Input_File.out
 	Generated 1000000 numbers.
 	That took 0.225235 seconds.
@@ -67,7 +67,6 @@ Within the for loop the base10 numbers are written to out.txt.
 
 
 > gcc -O3 Crunch_Numbers.c -o Crunch_Numbers.out
-
 > time ./Crunch_Numbers.out
 	Input calculations > 100 and FORCE_OUTPUT is false. Not printing calculations to not spam the console.
 	Made 1000000 calculations.
@@ -76,7 +75,7 @@ Within the for loop the base10 numbers are written to out.txt.
 	real	0m3.803s
 	user	0m2.240s
 	sys	0m1.552s
- </pre>
+</pre>
 
 <br />
 <br />
