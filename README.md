@@ -53,48 +53,6 @@ Within the for loop the base10 numbers are written to out.txt.
 
 <br />
 <br />
-6) Calculations
-
-Since there isn’t a function to process this proprietary data format the program needs to have its own methods to handle the data.
-
-> struct number_segment_uint32_t 
-
-Holds the data.
-<br />
-<br />
-> void free_struct(struct number_segment_uint32_t *_struct)
-
-Frees a struct and all of its child elements by recursively 	going down in the struct.
-<br />
-<br />
-> void reverse_struct(struct number_segment_uint32_t **in)
-
-Reverses the order of elements in a struct.
-Needed for the multiplication.
-<br />
-<br />
-> void multiply(struct number_segment_uint32_t* in, uint32_t multiplier)
-
-Multiplies data in a given struct by the given multiplier.
-If there is extra carry that needs to be added appends the carry as a node to the struct.
-<br />
-<br />
-> void copy_struct(struct number_segment_uint32_t* out, struct number_segment_uint32_t* in)
-
-Copies the data of struct in to struct out.
-Used when we need a copy of the data in a struct.
-<br />
-<br />
-> char* struct_to_char_array(struct number_segment_uint32_t *_struct)
-
-Converts data in the given struct to a base10 representation and returns it in a char array.
-<br />
-<br />
-> char* struct_to_char_array(struct number_segment_uint32_t *_struct)
-
-Main program loop where the files are read, calculating methods are accordingly called, and finally written to a file.
-<br />
-<br />
 <br />
 <pre>
 > gcc -O3 Generate_Input_File.c -o Generate_Input_File.out
